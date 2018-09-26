@@ -1,36 +1,56 @@
 #main{
     height: 100%;
-    width: 100%;
+    width: 60%;
+    margin: 30px 20% 30px 20%;
     background-color: "#fafafa";
     background-size: 100% 900%;
+
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+
     /* opacity: 0.9; */
 }
 
 #title{
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 70px;
+    font-size: 50px;
     padding-left: 230px;
 }
 
 hr{
-    width: 950px;
-    margin-left: 260px;
+    width: 740px;
+    margin-left: 60px;
     margin-top: -5px;
 }
 
 #searchArea{
     font-family: 'Trebuchet MS';
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
-    padding-top:100px;
-    padding-left: 400px;
+    padding-top:50px;
+    padding-left: 60px;
 }
 
 #searchBox{
-    font-size: 35px;
+    font-size: 20px;
     font-family: 'Trebuchet MS';
 }
 
 #searchBox:focus{
     outline: none;
+}
+
+#aboutMeArea{
+    padding:0 60px 0 60px;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+}
+
+#logoArea{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }

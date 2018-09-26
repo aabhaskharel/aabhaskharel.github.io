@@ -9,23 +9,39 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 
 <body>
   <div id="main">
     <div id="title">
-      A A B H A S  &nbspK H A R E L
+      1 2 3 4 5  1 2 3 4 5 
+      <!-- A A B H A S  &nbspK H A R E L -->
     </div>
     <hr>
+
     <div id="searchArea">
-      <v-flex md3>
-        <v-text-field v-model="input" id="searchBox" label="Search here.."></v-text-field>
+      <v-flex md5>
+        <v-text-field v-model="input" id="searchBox" label="Search here.." clearable></v-text-field>
       </v-flex>
-     
       &nbsp&nbsp{{ output }}
       <span v-if="showResume"><a href="https://www.google.com">resume</a>.</span>
     </div> 
+
+    <div id="aboutMeArea">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+        mollit anim id est laborum.</p>
+    </div>
+
+    <div id="logoArea">
+      <a href="https://www.github.com/aabhaskharel"><i class="fa fa-github-square fa-3x"></i></a>
+      <a href="https://www.linkedin.com/in/aabhaskharel"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+    </div>
 
   </div>
 </body>
