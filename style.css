@@ -1,0 +1,36 @@
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: "#fafafa";
+    background-size: 100% 900%;
+    /* opacity: 0.9; */
+}
+
+#title{
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 70px;
+    padding-left: 230px;
+}
+
+hr{
+    width: 950px;
+    margin-left: 260px;
+    margin-top: -5px;
+}
+
+#searchArea{
+    font-family: 'Trebuchet MS';
+    font-size: 40px;
+    font-weight: bold;
+    padding-top:100px;
+    padding-left: 400px;
+}
+
+#searchBox{
+    font-size: 35px;
+    font-family: 'Trebuchet MS';
+}
+
+#searchBox:focus{
+    outline: none;
+}
