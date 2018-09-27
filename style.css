@@ -1,13 +1,20 @@
+body{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(240, 240, 240);
+}
+
 #main{
     height: 100%;
     width: 60%;
-    margin: 30px 20% 30px 20%;
-    background-color: "#fafafa";
+    margin: 0 20% 30px 20%;
+    background-color: rgb(240, 240, 240)
     background-size: 100% 900%;
 
-    border-width: 1px;
+    /* border-width: 1px;
     border-color: rgb(0, 0, 0);
-    border-style: solid;
+    border-style: solid; */
 
     /* opacity: 0.9; */
 }
@@ -15,13 +22,14 @@
 #title{
     font-family: "Source Sans Pro", sans-serif;
     font-size: 50px;
-    padding-left: 230px;
+    padding-left: 150px;
 }
 
 hr{
     width: 740px;
     margin-left: 60px;
     margin-top: -5px;
+    border-color: rgb(59, 59, 59);
 }
 
 #searchArea{
@@ -41,10 +49,25 @@ hr{
     outline: none;
 }
 
+#responseArea{
+    text-align: center;
+    padding-top: 100px;
+}
+
 #aboutMeArea{
-    padding:0 60px 0 60px;
+    padding:20px 60px 0 60px;
     font-family: 'Trebuchet MS';
     font-size: 20px;
+}
+
+#main img{
+    height: 200px;
+    width: 200px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-left: 320px;
 }
 
 #logoArea{
@@ -53,4 +76,13 @@ hr{
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+.fa{
+    color: steelblue;
+    padding:3px;
+}
+
+.fa:hover{
+    color:rgb(48, 87, 119);
 }
