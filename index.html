@@ -15,24 +15,25 @@
 
 <body>
   <div id="main">
+    {{scroll}}
     <div id="title">
-      <!-- 1 2 3 4 5  1 2 3 4 5  -->
-      A A B H A S  &nbspK H A R E L
+        <!-- 1 2 3 4 5  1 2 3 4 5  -->
+        A A B H A S  &nbspK H A R E L
     </div>
     <hr>
+
+    <img src="https://images.pexels.com/photos/122427/roll-the-dice-craps-board-game-points-122427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" id="myImage">
 
     <div id="searchArea">
       <v-flex md5>
         <v-text-field v-model="input" id="searchBox" label="Search here.." v-on:click="searchBoxClicked" @change="searchBoxClicked" @blur="searchBoxLeave"></v-text-field>
       </v-flex>
-      <div v-if="!displayMid" id="responseArea">{{ output }}
+      <div id="responseArea">{{ output }}
         <span v-if="showResume"><a href="assets/resume_aabhaskharel.pdf" target="blank">resume</a>.</span>
       </div>
     </div> 
 
-    <img src="https://images.pexels.com/photos/122427/roll-the-dice-craps-board-game-points-122427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" v-if="displayMid">
-
-    <div v-if="displayMid" id="aboutMeArea">
+    <div id="aboutMeArea">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
         ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 

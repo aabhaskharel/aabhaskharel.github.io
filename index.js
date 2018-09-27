@@ -1,7 +1,10 @@
 var main = new Vue({
     el: '#main',
     data: {
-        displayMid: true,
+        // displayMid: true,
+        scroll: 0,
+        scrollPosition: 0,
+        showResume: false,
         input: '',
         output: '',
         greetings: [
@@ -10,20 +13,29 @@ var main = new Vue({
         resume: [
             'resume', 'cv', 'about', 'aabhas', 'kharel'
         ],
-        education:[
-            'school','uni','college','edu','graduate','study','studied','junior','texas','arlington','uta'
+        education: [
+            'school', 'uni', 'college', 'edu', 'graduate', 'study', 'studied', 'junior', 'texas', 'arlington', 'uta'
         ],
-        showResume: false
+        help:[
+            'help','confused','how'
+        ]
+
+    },
+    mounted() {
+        this.scrollHandler();
+        this.scrollPosition = window.scrollY;
     },
     watch: {
         input: function (newInput, oldInput) {
             this.showResume = false
-            this.output = 'Hmm..I wonder what that means.'
-            if(this.input == '')
+            this.output = 'Hmm..'
+            //blank response
+            if (this.input == '')
                 this.output = ''
+
             if (this.input == 'lol')
                 this.output = 'Hmm..I wonder what is so funny.'
-            
+
             //greetings response
             for (var i in this.greetings) {
                 if (this.input.toLowerCase().indexOf(this.greetings[i]) > -1)
@@ -41,19 +53,49 @@ var main = new Vue({
             //education response
             for (var i in this.education) {
                 if (this.input.toLowerCase().indexOf(this.education[i]) > -1) {
-                    return this.output = 'I am currently a junior majoring in Software Engineering at The University of Texas ar Arlington.'
+                    return this.output = 'I am currently a junior in Software Engineering at The University of Texas at Arlington.'
                 }
             }
 
-            //
+            //projects response
+
+            //skills response
+
+            //help response
+            for (var i in this.help) {
+                if (this.input.toLowerCase().indexOf(this.help[i]) > -1) {
+                    return this.output = 'Available search terms: Resume, Education, Projects, Skills.'
+                }
+            }
+
+            //other response
+            if(this.input == ' ')
+                this.output = 'Hmm..a space?'
+
         }
     },
-    methods:{
-        searchBoxClicked: function(){
-            this.displayMid = false;
+    methods: {
+        searchBoxClicked: function () {
+            document.getElementById("aboutMeArea").className += " blurText";
+            document.getElementById("myImage").className += " blurImage";
+            document.getElementById("logoArea").className += " blurLogo";
+            // this.displayMid = false;
         },
-        searchBoxLeave: function(){
-            this.displayMid = true;
+        searchBoxLeave: function () {
+            document.getElementById("aboutMeArea").className -= " blurText";
+            document.getElementById("myImage").className -= " blurImage";
+            document.getElementById("logoArea").className -= " blurLogo";
+            // this.displayMid = true;
+        },
+        scrollHandler: function (e) {
+            if (this.scrollPosition > window.scrollY) {
+                this.scroll--;
+            } else {
+                this.scroll++;
+            }
         }
+    },
+    created: function () {
+        window.addEventListener('scroll', this.scrollHandler);
     }
 });
