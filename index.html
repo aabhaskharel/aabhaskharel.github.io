@@ -9,8 +9,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 
 <body>
@@ -29,22 +28,22 @@
         <v-text-field v-model="input" id="searchBox" label="Search here.." v-on:click="searchBoxClicked" @change="searchBoxClicked" @blur="searchBoxLeave"></v-text-field>
       </v-flex>
       <div id="responseArea">{{ output }}
-        <span v-if="showResume"><a href="assets/resume_aabhaskharel.pdf" target="blank">resume</a>.</span>
+        <span v-if="showResume"><a href="assets/resume_aabhaskharel.pdf" target="blank">resume <i class="far fa-file-alt fa-1x"></i></a></i></span>
+        <span v-if="showGithub"><a href="assets/resume_aabhaskharel.pdf" target="blank">github <i class="fab fa-github fa-1x"></i></a></i></span>
       </div>
     </div> 
 
     <div id="aboutMeArea">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
         ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-        mollit anim id est laborum.</p>
+        mollit anim id est laborum.</p> -->
     </div>
 
     <div id="logoArea">
-      <a href="https://www.github.com/aabhaskharel"><i class="fa fa-github-square fa-3x"></i></a>
-      <a href="https://www.linkedin.com/in/aabhaskharel"><i class="fa fa-linkedin-square fa-3x"></i></a>
-      
+      <a href="https://www.github.com/aabhaskharel"><i class="fab fa-github-square fa-3x"></i></a>
+      <a href="https://www.linkedin.com/in/aabhaskharel"><i class="fab fa-linkedin fa-3x"></i></a>
     </div>
 
   </div>

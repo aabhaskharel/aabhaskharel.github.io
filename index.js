@@ -5,6 +5,7 @@ var main = new Vue({
         scroll: 0,
         scrollPosition: 0,
         showResume: false,
+        showGithub: false,
         input: '',
         output: '',
         greetings: [
@@ -13,11 +14,20 @@ var main = new Vue({
         resume: [
             'resume', 'cv', 'about', 'aabhas', 'kharel'
         ],
-        education: [
-            'school', 'uni', 'college', 'edu', 'graduate', 'study', 'studied', 'junior', 'texas', 'arlington', 'uta'
+        github:[
+            'github','code','programming','hack'
         ],
-        help:[
-            'help','confused','how'
+        education: [
+            'school', 'uni', 'college', 'edu', 'graduate', 'study', 'studied', 'junior', 'texas', 'arlington', 'uta', 'who'
+        ],
+        projects:[
+            
+        ],
+        skills:[
+
+        ],
+        help: [
+            'help', 'confused', 'how', 'what'
         ]
 
     },
@@ -28,6 +38,7 @@ var main = new Vue({
     watch: {
         input: function (newInput, oldInput) {
             this.showResume = false
+            this.showGithub = false
             this.output = 'Hmm..'
             //blank response
             if (this.input == '')
@@ -50,10 +61,18 @@ var main = new Vue({
                 }
             }
 
+            //github response
+            for (var i in this.github) {
+                if (this.input.toLowerCase().indexOf(this.github[i]) > -1) {
+                    this.showGithub = true
+                    return this.output = 'Here is my '
+                }
+            }
+
             //education response
             for (var i in this.education) {
                 if (this.input.toLowerCase().indexOf(this.education[i]) > -1) {
-                    return this.output = 'I am currently a junior in Software Engineering at The University of Texas at Arlington.'
+                    return this.output = 'I am currently a junior majoring in Software Engineering at The University of Texas at Arlington.'
                 }
             }
 
@@ -69,7 +88,7 @@ var main = new Vue({
             }
 
             //other response
-            if(this.input == ' ')
+            if (this.input == ' ')
                 this.output = 'Hmm..a space?'
 
         }
