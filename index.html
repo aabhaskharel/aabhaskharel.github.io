@@ -21,11 +21,11 @@
     </div>
     <hr>
 
-    <img src="https://images.pexels.com/photos/122427/roll-the-dice-craps-board-game-points-122427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" id="myImage">
+    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/42734751_937879353069747_224346508604997632_n.jpg?_nc_cat=101&oh=11f182487a32ec4ce383d57a9968344e&oe=5C61F733" id="myImage">
 
     <div id="searchArea">
-      <v-flex md5>
-        <v-text-field v-model="input" id="searchBox" label="Search here.." v-on:click="searchBoxClicked" @change="searchBoxClicked" @blur="searchBoxLeave"></v-text-field>
+      <v-flex id="searchBoxMain" class="md6">
+        <v-text-field v-model="input" id="searchBox" label="Search here.." v-on:click="searchBoxClicked" @change="searchBoxClicked" @blur="searchBoxLeave" :disabled="searchDisabled"></v-text-field>
       </v-flex>
       <div id="responseArea">{{ output }}
         <span v-if="showResume"><a href="assets/resume_aabhaskharel.pdf" target="blank">resume <i class="far fa-file-alt fa-1x"></i></a></i></span>
@@ -42,8 +42,9 @@
     </div>
 
     <div id="logoArea">
-      <a href="https://www.github.com/aabhaskharel"><i class="fab fa-github-square fa-3x"></i></a>
-      <a href="https://www.linkedin.com/in/aabhaskharel"><i class="fab fa-linkedin fa-3x"></i></a>
+      <a href="https://www.github.com/aabhaskharel"><i class="fab fa-github-square fa-2x"></i></a>
+      <a href="https://www.linkedin.com/in/aabhaskharel"><i class="fab fa-linkedin fa-2x"></i></a>
+      <p>Copyright © 2018 - Aabhas Kharel</p>
     </div>
 
   </div>

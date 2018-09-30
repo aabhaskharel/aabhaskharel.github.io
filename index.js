@@ -2,28 +2,32 @@ var main = new Vue({
     el: '#main',
     data: {
         // displayMid: true,
+        j: 0,
+        speed: 40,
         scroll: 0,
         scrollPosition: 0,
         showResume: false,
         showGithub: false,
+        // searchDisabled: false,
         input: '',
         output: '',
+        out: '',
         greetings: [
             'hi', 'hello', 'hey'
         ],
         resume: [
             'resume', 'cv', 'about', 'aabhas', 'kharel'
         ],
-        github:[
-            'github','code','programming','hack'
+        github: [
+            'github', 'code', 'programming', 'hack'
         ],
         education: [
-            'school', 'uni', 'college', 'edu', 'graduate', 'study', 'studied', 'junior', 'texas', 'arlington', 'uta', 'who'
+            'school', 'uni', 'college', 'edu', 'graduate', 'study', 'studied', 'junior', 'texas', 'arlington', 'uta', 'who', 'education'
         ],
-        projects:[
-            
+        projects: [
+
         ],
-        skills:[
+        skills: [
 
         ],
         help: [
@@ -39,40 +43,60 @@ var main = new Vue({
         input: function (newInput, oldInput) {
             this.showResume = false
             this.showGithub = false
+            this.speed = 40
             this.output = 'Hmm..'
-            //blank response
-            if (this.input == '')
-                this.output = ''
+            this.out = ''
 
-            if (this.input == 'lol')
-                this.output = 'Hmm..I wonder what is so funny.'
+            //blank response
+            if (this.input == '') {
+                this.out = ''
+                this.output = ''
+                this.j = 0;
+            }
+
+            if (this.input == 'lol') {
+                this.out = 'I wonder what is so funny.'
+                this.output = ''
+                this.typeWriter();
+            }
 
             //greetings response
             for (var i in this.greetings) {
-                if (this.input.toLowerCase().indexOf(this.greetings[i]) > -1)
-                    return this.output = 'Hey There!'
+                if (this.input.toLowerCase().indexOf(this.greetings[i]) > -1) {
+                    this.out = 'Hey There!'
+                    this.output = ''
+                    this.typeWriter();
+                }
             }
 
             //resume response
             for (var i in this.resume) {
                 if (this.input.toLowerCase().indexOf(this.resume[i]) > -1) {
+                    this.out = 'Here is my '
+                    this.output = ''
+                    this.typeWriter();
                     this.showResume = true
-                    return this.output = 'Here is my '
                 }
             }
 
             //github response
             for (var i in this.github) {
                 if (this.input.toLowerCase().indexOf(this.github[i]) > -1) {
+                    this.out = 'Here is my '
+                    this.output = ''
+                    this.typeWriter();
                     this.showGithub = true
-                    return this.output = 'Here is my '
                 }
             }
 
             //education response
             for (var i in this.education) {
                 if (this.input.toLowerCase().indexOf(this.education[i]) > -1) {
-                    return this.output = 'I am currently a junior majoring in Software Engineering at The University of Texas at Arlington.'
+                    this.out = 'I am a junior at The University of Texas at Arlington studying Software Engineering.'
+                    this.output = ''
+                    this.speed = 20;
+                    // this.searchDisabled = true;
+                    this.typeWriter();
                 }
             }
 
@@ -83,13 +107,14 @@ var main = new Vue({
             //help response
             for (var i in this.help) {
                 if (this.input.toLowerCase().indexOf(this.help[i]) > -1) {
-                    return this.output = 'Available search terms: Resume, Education, Projects, Skills.'
+                    this.out = 'Available search terms: Resume, Education, Projects, Skills.'
+                    this.output = ''
+                    this.speed = 20;
+                    this.typeWriter();
                 }
             }
 
             //other response
-            if (this.input == ' ')
-                this.output = 'Hmm..a space?'
 
         }
     },
@@ -112,6 +137,16 @@ var main = new Vue({
             } else {
                 this.scroll++;
             }
+        },
+        typeWriter: function () {
+            if (this.j < this.out.length) {
+                this.output += this.out.charAt(this.j);
+                this.j++;
+                setTimeout(this.typeWriter, this.speed);
+            }
+            // else{
+            //     this.searchDisabled = false;
+            // }
         }
     },
     created: function () {

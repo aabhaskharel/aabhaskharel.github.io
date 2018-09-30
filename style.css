@@ -7,7 +7,7 @@ body{
 }
 
 #main{
-    height: 900px;
+    height: 100%;
     width: 60%;
     margin: 0 20% 0 20%;
     /* background-color: rgb(250, 250, 250); */
@@ -26,6 +26,10 @@ body{
     color:rgb(48, 87, 119);
 }
 
+#title:hover{
+    transform: scale(1.008);
+}
+
 hr{
     width: 560px;
     margin-left: 150px;
@@ -40,7 +44,7 @@ hr{
     font-weight: bold;
     color:rgb(48, 87, 119);
     padding-top:30px;
-    padding-left: 310px;
+    padding-left: 280px;
 }
 
 #searchBox{
@@ -59,7 +63,6 @@ hr{
     height: 80px;
     /* text-align: center; */
     color:rgb(48, 87, 119);
-    /* padding-top: 100px; */
 }
 
 #aboutMeArea{
@@ -80,13 +83,18 @@ hr{
 
 #main img{
     height: 300px;
-    width: 300px;
+    width: 320px;
     border-color: black;
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-radius: 50%;
-    margin-left: 270px;
+    margin-left: 260px;
     margin-top: 50px;
+}
+
+#main img:hover{
+    transform: scale(1.008);
+
 }
 
 /* footer area */
@@ -98,13 +106,8 @@ hr{
     text-align: center;
 }
 
-.fa{
-    color: steelblue;
-    padding:3px;
-}
-
-.fa:hover{
-    color:rgb(48, 87, 119);
+.fab:hover{
+    transform: scale(1.1);
 }
 
 /* blur */
@@ -114,7 +117,7 @@ hr{
 }
 
 .blurImage{
-    filter: blur(5px);
+    filter: blur(3px);
 }
 
 .blurLogo{
