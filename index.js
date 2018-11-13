@@ -8,7 +8,7 @@ var main = new Vue({
         scrollPosition: 0,
         showResume: false,
         showGithub: false,
-        // searchDisabled: false,
+        searchDisabled: false,
         input: '',
         output: '',
         out: '',
@@ -95,7 +95,6 @@ var main = new Vue({
                     this.out = 'I am a junior at The University of Texas at Arlington studying Software Engineering.'
                     this.output = ''
                     this.speed = 20;
-                    // this.searchDisabled = true;
                     this.typeWriter();
                 }
             }
@@ -139,18 +138,17 @@ var main = new Vue({
             }
         },
         typeWriter: function () {
+            this.searchDisabled = true;
             if (this.j < this.out.length) {
                 this.output += this.out.charAt(this.j);
                 this.j++;
                 setTimeout(this.typeWriter, this.speed);
+            } else {
+                this.searchDisabled = false;
             }
-            // else{
-            //     this.searchDisabled = false;
-            // }
         }
     },
     created: function () {
         window.addEventListener('scroll', this.scrollHandler);
     }
 });
-
