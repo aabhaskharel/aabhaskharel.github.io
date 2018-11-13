@@ -19,13 +19,13 @@ var main = new Vue({
             'resume', 'cv', 'about', 'aabhas', 'kharel'
         ],
         github: [
-            'github', 'code', 'programming', 'hack'
+            'github', 'code', 'programming', 'hack', 'git'
         ],
         education: [
             'school', 'uni', 'college', 'edu', 'graduate', 'study', 'studied', 'junior', 'texas', 'arlington', 'uta', 'who', 'education'
         ],
         projects: [
-
+            'project', 'projects', 'side'
         ],
         skills: [
 
@@ -100,7 +100,15 @@ var main = new Vue({
             }
 
             //projects response
-
+            for (var i in this.projects) {
+                if (this.input.toLowerCase().indexOf(this.projects[i]) > -1) {
+                    this.out = 'Checkout my projects here '
+                    this.output = ''
+                    this.speed = 20;
+                    this.typeWriter();
+                    this.showGithub = true;
+                }
+            }
             //skills response
 
             //help response

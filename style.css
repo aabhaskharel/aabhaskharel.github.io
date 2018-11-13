@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  height: 100%;
+  margin: 20 0 20 0;
+  height: 90%;
   overflow: hidden;
   /* background-color: rgb(250, 250, 250); */
   background-color: white;
@@ -27,7 +27,7 @@ body {
 }
 
 #title:hover {
-  transform: scale(1.008);
+  /* transform: scale(1.008); */
 }
 
 hr {
@@ -86,9 +86,7 @@ hr {
 #main img {
   height: 280px;
   width: 340px;
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
+  border: solid 2px black;
   border-radius: 20%;
   margin-left: 260px;
   margin-top: 50px;
@@ -100,9 +98,9 @@ hr {
 
 /* footer area */
 #logoArea {
-  position: relative;
+  position: fixed;
   left: 0;
-  bottom: -40;
+  bottom: 0;
   width: 100%;
   text-align: center;
 }
