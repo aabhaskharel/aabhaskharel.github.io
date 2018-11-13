@@ -6,31 +6,37 @@
   <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 
 <body>
   <div id="main">
     <div id="title">
-        <!-- 1 2 3 4 5  1 2 3 4 5  -->
-        A A B H A S  &nbspK H A R E L
+      <!-- 1 2 3 4 5  1 2 3 4 5  -->
+      A A B H A S &nbspK H A R E L
     </div>
+
     <hr>
 
-    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/42734751_937879353069747_224346508604997632_n.jpg?_nc_cat=101&oh=11f182487a32ec4ce383d57a9968344e&oe=5C61F733" id="myImage">
+    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/42734751_937879353069747_224346508604997632_n.jpg?_nc_cat=101&oh=11f182487a32ec4ce383d57a9968344e&oe=5C61F733"
+      id="myImage">
 
     <div id="searchArea">
       <v-flex id="searchBoxMain" class="md6">
-        <v-text-field v-model="input" id="searchBox" label="Search here.." v-on:click="searchBoxClicked" @change="searchBoxClicked" @blur="searchBoxLeave" :disabled="searchDisabled"></v-text-field>
+        <v-text-field v-model="input" id="searchBox" label="Search here.." v-on:click="searchBoxClicked" @change="searchBoxClicked"
+          @blur="searchBoxLeave" :disabled="searchDisabled"></v-text-field>
       </v-flex>
       <div id="responseArea">{{ output }}
         <span v-if="showResume"><a href="assets/resume_aabhaskharel.pdf" target="blank">resume <i class="far fa-file-alt fa-1x"></i></a></i></span>
         <span v-if="showGithub"><a href="assets/resume_aabhaskharel.pdf" target="blank">github <i class="fab fa-github fa-1x"></i></a></i></span>
       </div>
-    </div> 
+    </div>
 
     <div id="aboutMeArea">
       <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
@@ -51,4 +57,5 @@
 
 <script src="index.js"></script>
 <link rel="stylesheet" href="style.css">
+
 </html>

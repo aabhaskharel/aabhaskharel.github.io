@@ -153,3 +153,4 @@ var main = new Vue({
         window.addEventListener('scroll', this.scrollHandler);
     }
 });
+
