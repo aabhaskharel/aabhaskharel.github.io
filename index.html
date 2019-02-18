@@ -12,43 +12,37 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
+  <!-- minify -->
+  <link href="https://unpkg.com/nes.css@2.0.0/css/nes.min.css" rel="stylesheet" />
+  <!-- latest -->
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <!-- core style only -->
+  <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>Aabhas Kharel | Home</title>
 </head>
 
 <body>
   <div id="main">
-    <div id="title">
-      <!-- 1 2 3 4 5  1 2 3 4 5  -->
-      A A B H A S &nbspK H A R E L
+    <input type="text" class="search button" v-model="input" id="searchBox" v-on:click="searchBoxClicked" @change="searchBoxClicked"
+      @blur="searchBoxLeave" :disabled="searchDisabled" placeholder="Search.." /><br>
+
+    {{ output }}
+    <span v-if="showResume"><a href="assets/resumeAabhasKharel.pdf" target="blank">resume <i class="far fa-file-alt fa-1x"></i></a></i></span>
+    <span v-if="showGithub"><a href="https://www.github.com/aabhaskharel" target="blank">github <i class="fab fa-github fa-1x"></i></a></i></span>
+    <div>
+      <img class="logo" src="./assets/02.jpg" onmouseover="this.src='./assets/03.jpg';" onmouseout="this.src='./assets/02.jpg';"
+        width="30%" />
     </div>
-
-    <hr>
-
-    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/42734751_937879353069747_224346508604997632_n.jpg?_nc_cat=101&oh=11f182487a32ec4ce383d57a9968344e&oe=5C61F733"
-      id="myImage">
-
-    <div id="searchArea">
-      <v-flex id="searchBoxMain" class="md6">
-        <v-text-field v-model="input" id="searchBox" label="Search here.." v-on:click="searchBoxClicked" @change="searchBoxClicked"
-          @blur="searchBoxLeave" :disabled="searchDisabled"></v-text-field>
-      </v-flex>
-      <div id="responseArea">{{ output }}
-        <span v-if="showResume"><a href="assets/resumeAabhasKharel.pdf" target="blank">resume <i class="far fa-file-alt fa-1x"></i></a></i></span>
-        <span v-if="showGithub"><a href="https://www.github.com/aabhaskharel" target="blank">github <i class="fab fa-github fa-1x"></i></a></i></span>
-      </div>
-    </div>
-
-    <div id="aboutMeArea">
-      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-        ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-        mollit anim id est laborum.</p> -->
-    </div>
-
-    <div id="logoArea">
-      <a href="https://www.github.com/aabhaskharel"><i class="fab fa-github-square fa-2x"></i></a>
-      <a href="https://www.linkedin.com/in/aabhaskharel"><i class="fab fa-linkedin fa-2x"></i></a>
+    <div class="footer">
+      <a href="">Resume</a> |
+      <a href="https://www.linkedin.com/in/aabhaskharel/"><i class="nes-icon linkedin"></i></a>
+      |
+      <a href="https://github.com/aabhaskharel"><i class="nes-icon github"></i></a>
+      |
+      <a href="https://devpost.com/aabhaskharel">DevPost</a>
       <p>Copyright © 2019 - Aabhas Kharel</p>
     </div>
 
