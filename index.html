@@ -1,58 +1,13 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <script src="https://unpkg.com/vue"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
-  <!-- minify -->
-  <link href="https://unpkg.com/nes.css@2.0.0/css/nes.min.css" rel="stylesheet" />
-  <!-- latest -->
-  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-  <!-- core style only -->
-  <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <title>Aabhas Kharel | Home</title>
+    <title>Aabhas Kharel | Home</title>
+    <link href=static/css/app.2e6b0428b86f3bf34f3df85517b4dda7.css rel=stylesheet>
 </head>
 
 <body>
-  <div id="main">
-    <input type="text" class="search button" v-model="input" id="searchBox" v-on:click="searchBoxClicked" @change="searchBoxClicked"
-      @blur="searchBoxLeave" :disabled="searchDisabled" placeholder="Search.." /><br>
-
-    {{ output }}
-    <span v-if="showResume"><a href="assets/resumeAabhasKharel.pdf" target="blank">resume <i class="far fa-file-alt fa-1x"></i></a></i></span>
-    <span v-if="showGithub"><a href="https://www.github.com/aabhaskharel" target="blank">github <i class="fab fa-github fa-1x"></i></a></i></span>
-    <div>
-      <img class="logo" src="./assets/03.jpg" onmouseover="this.src='./assets/02.jpg';" onmouseout="this.src='./assets/03.jpg';"
-        width="30%" />
-      <div class="nes-balloon from-left">
-        <p>Hey!</p>
-      </div>
-    </div>
-    <div class="footer">
-      <a href="./assets/resumeAabhasKharel.pdf" target="_blank">Resume</a> |
-      <a href="https://www.linkedin.com/in/aabhaskharel/" target="_blank"><i class="nes-icon linkedin"></i></a>
-      |
-      <a href="https://github.com/aabhaskharel" target="_blank"><i class="nes-icon github"></i></a>
-      |
-      <a href="https://devpost.com/aabhaskharel" target="_blank">DevPost</a>
-      <p>Copyright © 2019 - Aabhas Kharel</p>
-    </div>
-
-  </div>
-</body>
-
-<script src="index.js"></script>
-<link rel="stylesheet" href="style.css">
-
-</html>
+    <div id=app></div>
+    <script type=text/javascript src=static/js/manifest.2ae2e69a05c33dfc65f8.js> </script> <script type=text/javascript
+        src=static/js/vendor.67d06efbb49b14fd5a38.js> </script> <script type=text/javascript
+        src=static/js/app.7321d91c3cb7217f3600.js> </script> </body> </html>
